@@ -5,7 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Luke Hogan</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
+<script>
+  let lastScroll = 0;
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 50) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  });
+</script>
+
+
 <body>
     <!-- Navigation -->
     <nav>
@@ -32,18 +46,18 @@
     </section>
 
     <!-- About Section -->
-    <section id="about">
-        <div class="container">
+    <section id="about" data-aos="fade-up">
+        <div class="container" data-aos="fade-up" data-aos-delay="200">
             <h2>About Me</h2>
             <!--<p class="section-subtitle">A brief introduction</p>-->
             <div class="about-content">
-                <div class="about-text">
+                <div class="about-text" data-aos="fade-right" data-aos-delay="400">
                     <p>Cybersecurity, cloud and AI enablement consultant with 4 years' experience delivering Microsoft funded security and infrastructure assessments across enterprise, government, corporate and education sectors. I specialise in helping organisations strengthen their security posture, reduce risk, and unlock the full value of Microsoft 365, Azure, and emerging AI technologies.</p>
                     <p>As a consultant on Microsoft's ANZ Solution Assessment desk, I lead customers through high-impact assessments across Threat Protection, Data Security, Azure Benchmark TCO, and Security Business Value Assessments (BVA). I'm the primary consultant driving security-focused engagements and serve as a subject matter expert for key tools and assessment offerings. I blend deep technical expertise with strategic consulting to drive measurable business outcomes for Microsoft's customers and partners, including modernisation, cost optimisation, compliance uplift and AI-driven productivity gains.</p>
                     <p>I thrive in roles that blend hands-on technical work with strategic thinking. My strengths lie in cloud architecture, security frameworks (Essential Eight, CIS v8), and translating complex findings into clear, actionable insights for stakeholders.</p>
                     <p>In my current role, I provide technical leadership and strategic input across complex solution assessments. I operate with a high degree of autonomy and ownership and serve as a trusted consultant for high-impact client engagements. I’m focused on continuing to grow in cybersecurity architecture, AI governance and adoption, and cloud solution design, driving innovation while staying hands-on with the technology. I’m also open to leveraging my executive leadership experience on projects or mentoring teams where the opportunity aligns with a collaborative culture and technical depth.</p>
                 </div>
-                <div class="about-image">
+                <div class="about-image" data-aos="zoom-in" data-aos-delay="600">
                     [Your Photo Here]
                 </div>
             </div>
@@ -180,14 +194,13 @@
     <section id="contact">
         <div class="container">
             <h2>Get In Touch</h2>
-            <p class="section-subtitle">Let's connect and discuss opportunities</p>
+            <p class="section-subtitle">Let's connect!</p>
             <div class="contact-content">
                 <p>I'm always interested in hearing about new projects and opportunities. Feel free to reach out through any of the channels below.</p>
                 <div class="social-links">
                     <a href="#" class="social-link" title="Email">✉️</a>
                     <a href="https://www.linkedin.com/in/lukehoganaust/" class="social-link" title="LinkedIn">in</a>
                     <a href="https://github.com/hoges25" class="social-link" title="GitHub">GH</a>
-                    <!-- <a href="#" class="social-link" title="Twitter">𝕏</a> -->
                 </div>
                 <a href="mailto:your.email@example.com" class="cta-button">Send Me an Email</a>
             </div>
@@ -198,6 +211,9 @@
     <footer>
         <p>&copy; 2026 Luke Hogan. All rights reserved.</p>
     </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
 
 </body>
 </html>

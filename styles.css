@@ -732,8 +732,8 @@ section h2 {
 /* About Section */
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: calc(var(--space-16) * 3);
+    grid-template-columns: 2fr 1fr;
+    gap: calc(var(--space-16) * 1.5);
     align-items: center;
 }
 
@@ -1199,4 +1199,22 @@ footer {
         padding: var(--space-24);
         font-size: var(--font-size-sm);
     }
+}
+nav {
+  backdrop-filter: blur(10px);
+  transition: all var(--duration-normal);
+}
+nav.scrolled {
+  background: rgba(var(--color-navy-900-rgb), 0.95); /* Solid navy on scroll */
+  color: var(--color-offwhite); /* Force light text */
+}
+nav.scrolled .logo,
+nav.scrolled .nav-links a {
+  color: var(--color-white) !important; /* Readable white/navy contrast */
+}
+nav.scrolled .nav-links a:hover {
+  color: var(--color-blue-300) !important; /* Bright hover */
+}
+.logo.scrolled {
+  font-size: var(--font-size-xl);
 }
